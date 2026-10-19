@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T01:52:47.855240+00:00",
+  "title": "Design System: Ryan Hardwood Floor LLC",
+  "extensions": {
+    "colorMeta": {
+      "wall": {
+        "role": "neutral",
+        "displayName": "Slate-Navy Wall",
+        "canonical": "#1c2a37",
+        "tonalRamp": [
+          "#1a2733",
+          "#2d4459",
+          "#416280",
+          "#557fa7",
+          "#7a9cbb",
+          "#a1b9cf",
+          "#c7d6e3",
+          "#eef2f6"
+        ]
+      },
+      "wall-deep": {
+        "role": "neutral",
+        "displayName": "Deep Wall",
+        "canonical": "#15212c",
+        "tonalRamp": [
+          "#192734",
+          "#2c445b",
+          "#3e6283",
+          "#5180aa",
+          "#779cbe",
+          "#9fb9d1",
+          "#c6d6e4",
+          "#eef2f7"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Daylight Slate",
+        "canonical": "#e8edf1",
+        "tonalRamp": [
+          "#1d2730",
+          "#334554",
+          "#496378",
+          "#5f819c",
+          "#829eb3",
+          "#a7bac9",
+          "#cbd6df",
+          "#eff3f5"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f8fafc",
+        "tonalRamp": [
+          "#172636",
+          "#28435e",
+          "#3a6187",
+          "#4b7eb0",
+          "#739bc3",
+          "#9cb8d4",
+          "#c4d5e6",
+          "#edf2f7"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1c2a37",
+        "tonalRamp": [
+          "#1a2733",
+          "#2d4459",
+          "#416280",
+          "#557fa7",
+          "#7a9cbb",
+          "#a1b9cf",
+          "#c7d6e3",
+          "#eef2f6"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "#46525e",
+        "tonalRamp": [
+          "#21262c",
+          "#3a434d",
+          "#52616f",
+          "#6b7e90",
+          "#8c9ba9",
+          "#aeb8c2",
+          "#cfd5db",
+          "#f0f2f4"
+        ]
+      },
+      "on-wall": {
+        "role": "neutral",
+        "displayName": "Warm Plaster",
+        "canonical": "#f4ede1",
+        "tonalRamp": [
+          "#382b15",
+          "#634c24",
+          "#8d6c34",
+          "#b88d43",
+          "#c9a76c",
+          "#d9c197",
+          "#e9dac2",
+          "#f8f4ec"
+        ]
+      },
+      "on-wall-soft": {
+        "role": "neutral",
+        "displayName": "Soft Plaster",
+        "canonical": "#c4ccd3",
+        "tonalRamp": [
+          "#21272c",
+          "#3a444d",
+          "#52616f",
+          "#6b7f90",
+          "#8c9ca9",
+          "#aeb9c2",
+          "#cfd6db",
+          "#f0f2f4"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Roof-Mark Gold",
+        "canonical": "#d6a94e",
+        "tonalRamp": [
+          "#3e2e0e",
+          "#6d5219",
+          "#9d7524",
+          "#cc982f",
+          "#d9b05c",
+          "#e4c78c",
+          "#efdebb",
+          "#faf5ea"
+        ]
+      },
+      "gold-deep": {
+        "role": "primary",
+        "displayName": "Gold Deep",
+        "canonical": "#bf9036",
+        "tonalRamp": [
+          "#3c2d11",
+          "#694f1e",
+          "#97712b",
+          "#c49437",
+          "#d3ac63",
+          "#e0c490",
+          "#eddcbe",
+          "#f9f4eb"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#c3cdd7",
+        "tonalRamp": [
+          "#1f262e",
+          "#364351",
+          "#4d6174",
+          "#657e97",
+          "#879baf",
+          "#aab8c6",
+          "#cdd5dd",
+          "#f0f2f5"
+        ]
+      },
+      "focus": {
+        "role": "secondary",
+        "displayName": "Form Blue",
+        "canonical": "#2d6cdf",
+        "tonalRamp": [
+          "#0a1e42",
+          "#123575",
+          "#1a4ca8",
+          "#2163da",
+          "#5185e5",
+          "#84a9ec",
+          "#b6ccf4",
+          "#e9f0fc"
+        ]
+      },
+      "err": {
+        "role": "neutral",
+        "displayName": "Error Red",
+        "canonical": "#b3261e",
+        "tonalRamp": [
+          "#420e0b",
+          "#731913",
+          "#a5231c",
+          "#d72e24",
+          "#e25b53",
+          "#eb8b85",
+          "#f3bab7",
+          "#fbeae9"
+        ]
+      },
+      "oak-plain": {
+        "role": "neutral",
+        "displayName": "Plain Oak",
+        "canonical": "#a8763f",
+        "tonalRamp": [
+          "#382715",
+          "#624525",
+          "#8c6335",
+          "#b78045",
+          "#c89d6d",
+          "#d8ba98",
+          "#e8d6c2",
+          "#f8f3ec"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; uppercase, second line gold."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2, uppercase."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Step titles, sent-panel heading."
+      },
+      "row": {
+        "displayName": "Row",
+        "purpose": "Service rows."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Promise and close lines on the wall."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels and button text."
+      }
+    },
+    "shadows": [
+      {
+        "name": "baseboard-cast",
+        "value": "0 7px 12px -3px rgba(24,14,6,.5)",
+        "purpose": "Baseboard onto floor only."
+      },
+      {
+        "name": "form-halo",
+        "value": "0 0 0 3px rgba(45,108,223,.18)",
+        "purpose": "Input/chip hover and focus with blue border."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ui-color",
+        "value": "0.2s",
+        "purpose": "Buttons and service arrows: background/color/border only."
+      },
+      {
+        "name": "field-color",
+        "value": "0.15s",
+        "purpose": "Inputs and chips: border and halo."
+      },
+      {
+        "name": "floor-T",
+        "value": "DPR_MAX 1.5, PLANK 52, PLANK_DESK 64, CELL 4, BRUSH 0.62, BITE 0.34, REGROW 0.0007, CURE 0.005, SANDER_SPEED 300, IDLE_RESUME 3200, DUST_MAX 260",
+        "purpose": "Living-floor tunables in the T object; regrow ~25s, cure ~3s."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Floors paint once and never animate; smooth scroll off."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "small-phone",
+        "value": "max-width: 399px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "desk",
+        "value": "900px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Fill Button",
+      "kind": "button",
+      "refersTo": "button-fill",
+      "description": "The one gold action per screen; opens SMS.",
+      "html": "<a class=\"ds-btn ds-btn-fill\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2z\" transform=\"translate(-1 -1)\"/></svg>Text for a free estimate</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 26px;border-radius:12px;border:2px solid #d6a94e;font-family:var(--font,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif);font-size:17px;font-weight:800;text-decoration:none;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s} .ds-btn-fill{background:#d6a94e;color:#1c2a37}.ds-btn-fill:hover{background:#bf9036;border-color:#bf9036}.ds-btn-fill:focus-visible{outline:3px solid #d6a94e;outline-offset:3px}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action on the wall.",
+      "html": "<div class=\"ds-wall\"><a class=\"ds-btn ds-btn-line\" href=\"#\">Get a free quote</a></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 26px;border-radius:12px;border:2px solid #d6a94e;font-family:var(--font,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif);font-size:17px;font-weight:800;text-decoration:none;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s} .ds-wall{background:#1c2a37;padding:20px}.ds-btn-line{background:transparent;color:#f4ede1}.ds-btn-line:hover{background:rgba(214,169,78,.14)}.ds-btn-line:focus-visible{outline:3px solid #d6a94e;outline-offset:3px}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Wordmark left, tel number top right; not sticky.",
+      "html": "<div class=\"ds-top\"><a class=\"ds-brand\" href=\"#\"><svg viewBox=\"0 0 64 52\" width=\"42\" height=\"34\"><path d=\"M5 30 32 6l27 24\" fill=\"none\" stroke=\"#d6a94e\" stroke-width=\"6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M43 6h7v14l-7-6z\" fill=\"#d6a94e\"/><path d=\"M25 25h14v14H25z\" fill=\"#d6a94e\"/><path d=\"M32 25v14M25 32h14\" stroke=\"#1c2a37\" stroke-width=\"2.2\"/></svg><span class=\"ds-name\"><b>RYAN</b><small>HARDWOOD FLOOR LLC</small></span></a><a class=\"ds-phone\" href=\"#\">(973) 493-2410</a></div>",
+      "css": ".ds-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;background:#1c2a37;font-family:var(--font,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif)}.ds-brand{display:flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:#f4ede1}.ds-name{display:flex;flex-direction:column;line-height:1}.ds-name b{font-size:24px;font-weight:900;letter-spacing:.05em}.ds-name small{font-size:10px;font-weight:800;letter-spacing:.14em;color:#d6a94e;margin-top:4px}.ds-phone{display:flex;align-items:center;min-height:44px;color:#f4ede1;font-weight:800;font-size:16px;text-decoration:none;font-variant-numeric:tabular-nums}.ds-phone:hover{color:#d6a94e}.ds-phone:focus-visible{outline:3px solid #d6a94e;outline-offset:3px}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Tap-to-text service; only the arrow highlights.",
+      "html": "<ul class=\"ds-svc\"><li><a class=\"ds-row\" href=\"#\">Sanding &amp; refinishing<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\"><path d=\"M5 12h13M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a></li><li><a class=\"ds-row\" href=\"#\">Staining<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\"><path d=\"M5 12h13M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a></li></ul>",
+      "css": ".ds-svc{list-style:none;margin:0;padding:0 16px;background:#e8edf1;font-family:var(--font,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif)}.ds-svc li{border-bottom:1px solid #c3cdd7}.ds-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;padding:10px 0;text-decoration:none;color:#1c2a37;font-size:21px;font-weight:800;line-height:1.2}.ds-arrow{flex:none;width:42px;height:42px;border-radius:50%;background:rgba(28,42,55,.08);display:grid;place-items:center;transition:background-color .2s}.ds-row:hover,.ds-row:focus-visible{outline:none}.ds-row:hover .ds-arrow,.ds-row:focus-visible .ds-arrow{background:#d6a94e}.ds-row:focus-visible .ds-arrow{outline:3px solid #1c2a37;outline-offset:3px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Paper field; blue outline on hover and focus.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-t\">Town</label><input id=\"ds-t\" class=\"ds-input\" placeholder=\"Where the job is\"></div>",
+      "css": ".ds-field{font-family:var(--font,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif);color:#1c2a37;background:#e8edf1;padding:16px}.ds-field label{display:block;font-weight:800;font-size:17px;margin-bottom:8px}.ds-input{width:100%;min-height:54px;padding:12px 14px;border:2px solid #c3cdd7;border-radius:10px;background:#f8fafc;color:#1c2a37;font:inherit;font-size:17px;transition:border-color .15s,box-shadow .15s}.ds-input::placeholder{color:#68737e}.ds-input:hover,.ds-input:focus{outline:none;border-color:#2d6cdf;box-shadow:0 0 0 3px rgba(45,108,223,.18)}"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Checkbox/radio choice; ink when checked.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"checkbox\" checked><span>Staining</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span>Floor repairs</span></label></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:10px;font-family:var(--font,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif);background:#e8edf1;padding:16px}.ds-chip{position:relative}.ds-chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}.ds-chip span{display:flex;align-items:center;min-height:48px;padding:0 16px;border:2px solid #c3cdd7;border-radius:10px;background:#f8fafc;color:#1c2a37;font-weight:700;cursor:pointer;transition:background-color .15s,border-color .15s,color .15s}.ds-chip:hover span,.ds-chip input:focus-visible+span{border-color:#2d6cdf;box-shadow:0 0 0 3px rgba(45,108,223,.18)}.ds-chip input:checked+span{background:#1c2a37;border-color:#1c2a37;color:#f8fafc}.ds-chip:hover input:checked+span,.ds-chip input:checked:focus-visible+span{border-color:#2d6cdf}"
+    },
+    {
+      "name": "Steps",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Numbered steps on the wall, gold numerals.",
+      "html": "<ol class=\"ds-steps\"><li><span class=\"ds-n\">1</span><h3>Call or text us</h3><p>Tell us about the floor and your town.</p></li></ol>",
+      "css": ".ds-steps{list-style:none;margin:0;padding:20px;background:#1c2a37;color:#f4ede1;font-family:var(--font,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif)}.ds-steps li{display:grid;grid-template-columns:52px 1fr;gap:4px 14px}.ds-n{grid-row:span 2;font-size:48px;line-height:.9;font-weight:900;color:#d6a94e}.ds-steps h3{margin:0;font-size:21px;font-weight:900;line-height:1.25;padding-top:4px}.ds-steps p{margin:0;color:#c4ccd3;max-width:40ch}"
+    },
+    {
+      "name": "The Room",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Wall, white baseboard, oak floor (static stand-in; the real floor is a sanding canvas).",
+      "html": "<div class=\"ds-room\"><div class=\"ds-wallpart\"></div><div class=\"ds-base\"></div><div class=\"ds-floor\"></div></div>",
+      "css": ".ds-wallpart{height:80px;background:#1c2a37}.ds-base{position:relative;z-index:2;height:24px;background:linear-gradient(#f7f3ec 0,#f7f3ec 3px,#e9e2d6 4px,#f3eee5 9px,#e4dccf 100%);box-shadow:0 7px 12px -3px rgba(24,14,6,.5)}.ds-floor{height:120px;background:repeating-linear-gradient(180deg,#a8763f 0,#a8763f 50px,rgba(52,28,12,.72) 50px,rgba(52,28,12,.72) 52px)}"
+    },
+    {
+      "name": "Sent Panel",
+      "kind": "card",
+      "refersTo": "sent-panel",
+      "description": "SMS fallback with copyable message.",
+      "html": "<div class=\"ds-sent\"><h3>Your text is ready</h3><p>If your messages app didn't open, copy this and text it to <a href=\"#\">(973) 493-2410</a>.</p><pre>Hi! I'd like a free estimate.</pre><button class=\"ds-btn-ink\">Copy message</button></div>",
+      "css": ".ds-sent{max-width:640px;padding:20px;border-radius:12px;background:#f8fafc;border:2px solid #c3cdd7;color:#1c2a37;font-family:var(--font,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif)}.ds-sent h3{margin:0 0 6px;font-size:21px;font-weight:900}.ds-sent p{margin:0 0 12px}.ds-sent a{font-weight:800;color:inherit}.ds-sent pre{margin:0 0 16px;padding:14px;border-radius:10px;background:#e8edf1;white-space:pre-wrap;font:15px/1.5 inherit}.ds-btn-ink{min-height:52px;padding:0 26px;border-radius:12px;border:2px solid #1c2a37;background:transparent;color:#1c2a37;font:inherit;font-weight:800;cursor:pointer}.ds-btn-ink:focus-visible,.ds-sent a:focus-visible{outline:3px solid #1c2a37;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Room Being Refinished",
+    "overview": "The page is the inside of a New Jersey home. Dark sections are a slate-navy painted wall; each wall section stands on a crisp white baseboard and a strip of oak plank floor. Light sections are the same room in daylight, a pale slate. Gold trim comes from the company's own flyer roof mark. The trade is the interaction: the floor starts worn and grey, and sanding (by finger or by an autoplay sander) takes it back to bare pale oak, which warms into finished amber.\n\nDensity is phone-first and plain-spoken: one column, big touch targets (44px minimum, 58px primary buttons), heavy uppercase headings in the system face, sentence-case body. No photography until the owner sends real work photos; the floor canvas is the only imagery.",
+    "keyCharacteristics": [
+      "Wall / baseboard / floor stack at the base of every dark section.",
+      "Slate-navy ground, never black; gold as trim and the one fill CTA.",
+      "Blue appears only on form controls (hover/focus), so it never competes with gold.",
+      "System font stack, 900-weight uppercase display, tabular phone numbers.",
+      "Flat UI; the only depth is physical (baseboard shadow, floor lighting)."
+    ],
+    "rules": [
+      {
+        "name": "The Never-Black Rule",
+        "body": "The darkest ground is `wall-deep`. The brand's \"black and gold\" is translated to slate-navy and gold; pure or near-black grounds are out.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Accents, Two Jobs Rule",
+        "body": "Gold is trim and the action fill. Blue is form-control outline only. Never put blue on a CTA fill or gold on a form-field outline.",
+        "section": "colors"
+      },
+      {
+        "name": "The Shout-Then-Talk Rule",
+        "body": "Uppercase is for h1/h2 and the wordmark only. Everything else is sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Phone Rule",
+        "body": "Phone numbers in the header use `font-variant-numeric: tabular-nums`.",
+        "section": "typography"
+      },
+      {
+        "name": "The Only-The-Room-Has-Depth Rule",
+        "body": "Shadows belong to the baseboard and floor. Interface elements stay flat; state is shown by color and outline.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do end every wall section with a baseboard and a floor strip.",
+      "Do keep gold for trim and the single fill action per screen; use blue only for form-control outlines.",
+      "Do keep the system font stack with 900-weight uppercase h1/h2 and sentence-case everything else.",
+      "Do keep touch targets at 44px or more and primary buttons at 58px.",
+      "Do keep the hero floor `touch-action: none` and strips `pan-y`.",
+      "Do route new contact actions to `sms:` / `tel:` (973) 493-2410, with a prefilled SMS body where it helps.",
+      "Do use only facts in PRODUCT.md; put gaps in HANDOFF.md, never on the page."
+    ],
+    "donts": [
+      "Don't use black or near-black grounds; the darkest ground is the deep wall.",
+      "Don't add a sticky header, sticky call bar or floating button.",
+      "Don't show the phone number more than once per screen (header, sent panel and footer are each on their own screen).",
+      "Don't add an email address; none exists. If one is ever confirmed, it goes in the footer only.",
+      "Don't invent towns, hours, prices, reviews, years, credentials or owner names.",
+      "Don't use photos until the owner supplies real work photos; the flyer image is not proof of work.",
+      "Don't highlight a whole service row on hover; only its arrow changes.",
+      "Don't add shadows to cards, buttons or fields; depth belongs to the room."
+    ]
+  }
+}
