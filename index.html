@@ -52,7 +52,7 @@ svg{display:block}
 
 /* ============ HEADER ============ */
 .top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px var(--gutter) 6px;max-width:1240px;margin:0 auto;width:100%}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--on-wall)}
+.brand{display:flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:var(--on-wall)}
 .brand-mark{width:42px;height:34px;flex:none}
 .brand-name{display:flex;flex-direction:column;line-height:1}
 .brand-name b{font-size:24px;font-weight:900;letter-spacing:.05em}
@@ -263,7 +263,7 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
       </div>
       <div class="field">
         <label for="q-town">Town</label>
-        <input type="text" id="q-town" name="town" autocomplete="address-level2" placeholder="e.g. Montclair" aria-describedby="e-town">
+        <input type="text" id="q-town" name="town" autocomplete="address-level2" placeholder="Where the job is" aria-describedby="e-town">
         <p class="err" id="e-town" role="alert"></p>
       </div>
       <fieldset class="field" aria-describedby="e-work">
