@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ryan Hardwood Floor LLC | Hardwood floors in New Jersey</title>
+<meta name="description" content="Hardwood, vinyl and laminate installation, sanding, staining and refinishing, floor repairs and stairs across New Jersey. Free estimates. Call or text (973) 493-2410.">
+<meta name="theme-color" content="#1c2a37">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ryan Hardwood Floor LLC">
+<meta property="og:description" content="Beautiful floors. Built to last. Free estimates across New Jersey. Call or text (973) 493-2410.">
+<meta property="og:url" content="https://10elizabethbell.github.io/ryanHardwoodFloor/">
+<meta property="og:image" content="https://10elizabethbell.github.io/ryanHardwoodFloor/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c2a37'/%3E%3Cpath d='M10 36 32 16l22 20' fill='none' stroke='%23d6a94e' stroke-width='6' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M42 15h6v12l-6-5z' fill='%23d6a94e'/%3E%3Cpath d='M26 32h12v12H26z' fill='%23d6a94e'/%3E%3Cpath d='M32 32v12M26 38h12' stroke='%231c2a37' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --wall:#1c2a37;        /* slate-navy wall: the page's dark ground (never black) */
+  --wall-deep:#15212c;
+  --cream:#f6f0e6;       /* light sections */
+  --paper:#fffcf7;
+  --ink:#1c2a37;
+  --ink-soft:#4f4a45;
+  --on-wall:#f4ede1;
+  --on-wall-soft:#c4ccd3;
+  --gold:#d6a94e;        /* from the flyer's roof mark */
+  --gold-deep:#bf9036;
+  --line:#d4c9b8;
+  --focus:#2d6cdf;       /* form outlines: stands apart from the gold fill */
+  --err:#b3261e;
+  --radius:12px;
+  --gutter:16px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+/* ============ BASE ============ */
+*{box-sizing:border-box}
+html{overscroll-behavior-y:none;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.55 var(--font);-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:var(--ink)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{margin:0;font-weight:900;text-wrap:balance}
+h2{font-size:clamp(30px,8vw,54px);line-height:1;text-transform:uppercase;letter-spacing:-.01em}
+svg{display:block}
+
+/* ============ HEADER ============ */
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px var(--gutter) 6px;max-width:1240px;margin:0 auto;width:100%}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--on-wall)}
+.brand-mark{width:42px;height:34px;flex:none}
+.brand-name{display:flex;flex-direction:column;line-height:1}
+.brand-name b{font-size:24px;font-weight:900;letter-spacing:.05em}
+.brand-name small{font-size:10px;font-weight:800;letter-spacing:.14em;color:var(--gold);margin-top:4px;white-space:nowrap}
+.top-phone{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 2px;color:var(--on-wall);font-weight:800;font-size:16px;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
+.top-phone svg{width:18px;height:18px;color:var(--gold)}
+.top-phone:hover{color:var(--gold)}
+
+/* ============ WALL + FLOOR (the room) ============ */
+.wall{background:var(--wall);color:var(--on-wall)}
+.baseboard{position:relative;z-index:2;height:24px;background:linear-gradient(#f7f3ec 0,#f7f3ec 3px,#e9e2d6 4px,#f3eee5 9px,#e4dccf 100%);box-shadow:0 7px 12px -3px rgba(24,14,6,.5)}
+.floor{position:relative;overflow:hidden;
+  /* still fallback before the script paints */
+  background:repeating-linear-gradient(180deg,#b9813f 0 52px,#6b4320 52px 54px),#b9813f}
+.floor canvas{position:absolute;inset:0;width:100%;height:100%;display:block;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.floor.strip{height:clamp(120px,22vw,170px)}
+.floor.strip canvas{touch-action:pan-y}
+
+/* ============ HERO ============ */
+.hero{min-height:100svh;display:flex;flex-direction:column}
+.hero-copy{padding:22px var(--gutter) 34px;max-width:1240px;margin:0 auto;width:100%}
+.hero h1{font-size:clamp(31px,8.9vw,96px);line-height:.96;letter-spacing:-.02em;text-transform:uppercase;margin-bottom:18px}
+.hero h1 span{display:block}
+.hero h1 .gold{color:var(--gold)}
+.promise{margin:0;max-width:36ch;font-size:clamp(17px,4.6vw,20px);line-height:1.5;color:var(--on-wall-soft)}
+.btns{display:grid;gap:12px;margin-top:26px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 26px;border-radius:var(--radius);border:2px solid var(--gold);font:inherit;font-size:17px;font-weight:800;text-decoration:none;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-fill{background:var(--gold);color:var(--ink)}
+.btn-fill:hover{background:var(--gold-deep);border-color:var(--gold-deep)}
+.btn-line{background:transparent;color:var(--on-wall)}
+.btn-line:hover{background:rgba(214,169,78,.14)}
+.hero .floor{flex:1 1 auto;min-height:max(230px,34svh)}
+.hero .floor canvas{touch-action:none}
+
+/* ============ SERVICES ============ */
+.services{padding:64px 0 56px}
+.services h2{margin-bottom:10px}
+.area{margin:0 0 6px;font-weight:700;color:var(--ink-soft)}
+.svc{list-style:none;margin:20px 0 0;padding:0}
+.svc li{border-bottom:1px solid var(--line)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;padding:10px 0;text-decoration:none;color:var(--ink);font-size:clamp(19px,5vw,23px);font-weight:800;line-height:1.2}
+.arrow{flex:none;width:42px;height:42px;border-radius:50%;background:rgba(28,42,55,.08);display:grid;place-items:center;transition:background-color .2s}
+.arrow svg{width:18px;height:18px}
+.row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
+.row:hover .arrow,.row:focus-visible .arrow{background:var(--gold)}
+.row:focus-visible .arrow{outline:3px solid var(--gold);outline-offset:3px}
+.svc-note{margin:16px 0 0;color:var(--ink-soft);font-size:16px}
+
+/* ============ HOW IT WORKS ============ */
+.steps-wrap{padding-top:64px;padding-bottom:48px}
+.steps{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:30px}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:4px 14px;align-items:start}
+.steps .n{grid-row:span 2;font-size:48px;line-height:.9;font-weight:900;color:var(--gold)}
+.steps h3{font-size:21px;line-height:1.25;padding-top:4px}
+.steps p{margin:0;color:var(--on-wall-soft);max-width:40ch}
+
+/* ============ QUOTE FORM ============ */
+.quote{padding:64px 0 72px}
+.quote h2{margin-bottom:26px}
+form{display:grid;gap:24px;max-width:640px}
+.field label,.field legend{display:block;font-weight:800;font-size:17px;margin-bottom:8px;padding:0}
+.field legend{margin-bottom:10px}
+.opt{font-weight:600;color:var(--ink-soft)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+input[type=text],input[type=tel],textarea{width:100%;min-height:54px;padding:12px 14px;border:2px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);font:inherit;font-size:17px;transition:border-color .15s,box-shadow .15s}
+textarea{min-height:110px;resize:vertical}
+input[type=text]:hover,input[type=tel]:hover,textarea:hover,
+input[type=text]:focus,input[type=tel]:focus,textarea:focus{outline:none;border-color:var(--focus);box-shadow:0 0 0 3px rgba(45,108,223,.18)}
+::placeholder{color:#857c72}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.chip span{display:flex;align-items:center;min-height:48px;padding:0 16px;border:2px solid var(--line);border-radius:10px;background:var(--paper);font-weight:700;cursor:pointer;transition:background-color .15s,border-color .15s,color .15s}
+.chip:hover span,.chip input:focus-visible+span{border-color:var(--focus);box-shadow:0 0 0 3px rgba(45,108,223,.18)}
+.chip input:checked+span{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.chip:hover input:checked+span,.chip input:checked:focus-visible+span{border-color:var(--focus)}
+.err{margin:8px 0 0;color:var(--err);font-weight:700;font-size:16px}
+.err:empty{display:none}
+[aria-invalid=true]{border-color:var(--err)!important}
+.quote .btn:hover,.quote .btn:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.send-note{margin:-8px 0 0;color:var(--ink-soft);font-size:16px}
+.sent{max-width:640px;margin-top:28px;padding:20px;border-radius:var(--radius);background:var(--paper);border:2px solid var(--line)}
+.sent[hidden]{display:none}
+.sent h3{font-size:21px;margin-bottom:6px}
+.sent p{margin:0 0 12px}
+.sent pre{margin:0 0 16px;padding:14px;border-radius:10px;background:var(--cream);white-space:pre-wrap;font:15px/1.5 var(--font)}
+.sent .btn{border-color:var(--ink);color:var(--ink);background:transparent;min-height:52px}
+.sent a{font-weight:800}
+
+/* ============ CLOSE ============ */
+.close-copy{padding:72px var(--gutter) 44px;max-width:1240px;margin:0 auto}
+.close-copy h2{font-size:clamp(34px,9.6vw,80px);margin-bottom:14px}
+.close-copy p{margin:0;max-width:38ch;color:var(--on-wall-soft);font-size:clamp(17px,4.6vw,20px)}
+
+/* ============ FOOTER ============ */
+footer{background:var(--wall-deep);color:var(--on-wall-soft);padding:40px 0 calc(40px + env(safe-area-inset-bottom))}
+footer .wrap{display:grid;gap:18px}
+footer .brand{color:var(--on-wall)}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 26px}
+.foot-links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--on-wall);font-weight:700;text-decoration:underline;text-decoration-color:rgba(214,169,78,.6);text-underline-offset:4px}
+.foot-links a:hover{color:var(--gold)}
+.fine{margin:0;font-size:15px}
+
+/* ============ SMALL PHONES ============ */
+@media (max-width:399px){
+  .brand{gap:8px}
+  .brand-mark{width:34px;height:28px}
+  .brand-name b{font-size:21px}
+  .brand-name small{font-size:8.5px;letter-spacing:.12em}
+  .top-phone{font-size:15px}
+  .top-phone svg{display:none}
+}
+
+/* ============ WIDER SCREENS ============ */
+@media (min-width:640px){
+  .btns{grid-auto-flow:column;justify-content:start}
+}
+@media (min-width:900px){
+  :root{--gutter:40px}
+  .top{padding-top:22px}
+  .brand-mark{width:52px;height:42px}
+  .brand-name b{font-size:30px}
+  .brand-name small{font-size:11.5px}
+  .top-phone{font-size:19px}
+  .hero-copy{padding-top:56px;padding-bottom:52px}
+  .svc{columns:2;column-gap:56px}
+  .svc li{break-inside:avoid}
+  .steps{grid-template-columns:repeat(3,1fr);gap:40px}
+  .services,.steps-wrap,.quote{padding-top:96px}
+  .quote .wrap{max-width:720px}
+  .close-copy{padding-top:110px}
+}
+</style>
+</head>
+<body>
+<!--
+DIRECTION CONTRACT
+THESIS: A refinisher's whole craft is taking a tired floor back to beautiful. The page lets you do exactly that with your finger.
+OWN-WORLD: Inside a New Jersey home: slate-navy painted walls, a crisp white baseboard, and oak plank floors. Worn grey finish on top; under it, bare sanded oak that warms into finished amber. Gold trim from the company's own roof mark.
+STORY: Wall + floor (who, what, free estimate) -> services you can tap to text -> how it works -> free-estimate form that hands off by text -> close with Facebook for more work -> footer.
+FIRST VIEWPORT (phone): wordmark left, phone number top right; "Beautiful floors. Built to last." (their slogan); one-line promise; Text / Free quote buttons; the floor being sanded below.
+FORM: system type, heavy uppercase display, sentence-case body; living floors at the base of every wall section; no photos until the owner sends real ones.
+-->
+
+<!-- ============ HERO ============ -->
+<header class="wall hero" id="top">
+  <div class="top">
+    <a class="brand" href="#top" aria-label="Ryan Hardwood Floor LLC, back to top">
+      <svg class="brand-mark" viewBox="0 0 64 52" aria-hidden="true"><path d="M5 30 32 6l27 24" fill="none" stroke="#d6a94e" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><path d="M43 6h7v14l-7-6z" fill="#d6a94e"/><path d="M25 25h14v14H25z" fill="#d6a94e"/><path d="M32 25v14M25 32h14" stroke="#1c2a37" stroke-width="2.2"/></svg>
+      <span class="brand-name"><b>RYAN</b><small>HARDWOOD FLOOR LLC</small></span>
+    </a>
+    <a class="top-phone" href="tel:+19734932410"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>(973) 493-2410</a>
+  </div>
+  <div class="hero-copy">
+    <h1><span>Beautiful floors.</span><span class="gold">Built to last.</span></h1>
+    <p class="promise">We treat your home like our own, and we don't call a floor finished until you love walking on it.</p>
+    <div class="btns">
+      <a class="btn btn-fill" href="sms:+19734932410" data-sms="Hi! I'd like a free estimate for my floors. Town: "><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2z" transform="translate(-1 -1)"/></svg>Text for a free estimate</a>
+      <a class="btn btn-line" href="#quote">Get a free quote</a>
+    </div>
+  </div>
+  <div class="baseboard" aria-hidden="true"></div>
+  <div class="floor" aria-hidden="true"><canvas data-floor="hero"></canvas></div>
+</header>
+
+<main>
+<!-- ============ SERVICES ============ -->
+<section class="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <h2 id="svc-h">What we do</h2>
+    <p class="area">Serving New Jersey</p>
+    <ul class="svc">
+      <li><a class="row" href="sms:+19734932410" data-sms="Hi! I'd like a free estimate for hardwood installation. Town: ">Hardwood installation<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" href="sms:+19734932410" data-sms="Hi! I'd like a free estimate for sanding and refinishing. Town: ">Sanding &amp; refinishing<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" href="sms:+19734932410" data-sms="Hi! I'd like a free estimate for staining my floors. Town: ">Staining<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" href="sms:+19734932410" data-sms="Hi! I'd like a free estimate for vinyl (LVP) or laminate installation. Town: ">Vinyl (LVP) &amp; laminate<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" href="sms:+19734932410" data-sms="Hi! I'd like a free estimate for a floor repair. Town: ">Floor repairs<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" href="sms:+19734932410" data-sms="Hi! I'd like a free estimate for stair refinishing. Town: ">Stair refinishing<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+    </ul>
+    <p class="svc-note">Tap one to text us about it.</p>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="wall" aria-labelledby="how-h">
+  <div class="wrap steps-wrap">
+    <h2 id="how-h">How it works</h2>
+    <ol class="steps">
+      <li><span class="n" aria-hidden="true">1</span><h3>Text us a few photos</h3><p>Show us the floor and tell us your town.</p></li>
+      <li><span class="n" aria-hidden="true">2</span><h3>Free estimate</h3><p>We look at the job and give you a straight price before any work starts.</p></li>
+      <li><span class="n" aria-hidden="true">3</span><h3>Floors you're proud of</h3><p>Installed, sanded or repaired, and finished to last.</p></li>
+    </ol>
+  </div>
+  <div class="baseboard" aria-hidden="true"></div>
+  <div class="floor strip" aria-hidden="true"><canvas data-floor="strip"></canvas></div>
+</section>
+
+<!-- ============ QUOTE FORM ============ -->
+<section class="quote" id="quote" aria-labelledby="quote-h">
+  <div class="wrap">
+    <h2 id="quote-h">Get a free estimate</h2>
+    <form id="quote-form" novalidate>
+      <div class="field">
+        <label for="q-name">Your name</label>
+        <input type="text" id="q-name" name="name" autocomplete="name" aria-describedby="e-name">
+        <p class="err" id="e-name" role="alert"></p>
+      </div>
+      <div class="field">
+        <label for="q-town">Town</label>
+        <input type="text" id="q-town" name="town" autocomplete="address-level2" placeholder="e.g. Montclair" aria-describedby="e-town">
+        <p class="err" id="e-town" role="alert"></p>
+      </div>
+      <fieldset class="field" aria-describedby="e-work">
+        <legend>What do you need?</legend>
+        <div class="chips" id="q-work">
+          <label class="chip"><input type="checkbox" name="work" value="Hardwood installation"><span>Hardwood installation</span></label>
+          <label class="chip"><input type="checkbox" name="work" value="Sanding & refinishing"><span>Sanding &amp; refinishing</span></label>
+          <label class="chip"><input type="checkbox" name="work" value="Staining"><span>Staining</span></label>
+          <label class="chip"><input type="checkbox" name="work" value="Vinyl (LVP) & laminate"><span>Vinyl (LVP) &amp; laminate</span></label>
+          <label class="chip"><input type="checkbox" name="work" value="Floor repairs"><span>Floor repairs</span></label>
+          <label class="chip"><input type="checkbox" name="work" value="Stair refinishing"><span>Stair refinishing</span></label>
+        </div>
+        <p class="err" id="e-work" role="alert"></p>
+      </fieldset>
+      <div class="field">
+        <label for="q-size">How big is the job? <span class="opt">(optional)</span></label>
+        <input type="text" id="q-size" name="size" placeholder="e.g. 2 bedrooms and a hallway">
+      </div>
+      <fieldset class="field">
+        <legend>When? <span class="opt">(optional)</span></legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="when" value="As soon as possible"><span>As soon as possible</span></label>
+          <label class="chip"><input type="radio" name="when" value="In the next month"><span>In the next month</span></label>
+          <label class="chip"><input type="radio" name="when" value="Just planning"><span>Just planning</span></label>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="q-notes">Anything else? <span class="opt">(optional)</span></label>
+        <textarea id="q-notes" name="notes" placeholder="Wood type, stain color, pets, stairs…"></textarea>
+      </div>
+      <button class="btn btn-fill" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2z" transform="translate(-1 -1)"/></svg>Text my request</button>
+      <p class="send-note">Opens a text to us with your answers filled in. Add a few photos of the floor before you send.</p>
+    </form>
+    <div class="sent" id="sent" hidden tabindex="-1">
+      <h3>Your text is ready</h3>
+      <p>If your messages app didn't open, copy this and text it to <a href="tel:+19734932410">(973) 493-2410</a>.</p>
+      <pre id="sent-msg"></pre>
+      <button class="btn" type="button" id="copy-btn">Copy message</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSE ============ -->
+<section class="wall" aria-labelledby="close-h">
+  <div class="close-copy">
+    <h2 id="close-h">Let's see your floor.</h2>
+    <p>Send a few photos and your town. The estimate is free.</p>
+    <div class="btns">
+      <a class="btn btn-fill" href="sms:+19734932410" data-sms="Hi! I'd like a free estimate. Here are some photos of my floor. Town: "><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2z" transform="translate(-1 -1)"/></svg>Text us your photos</a>
+      <a class="btn btn-line" href="https://facebook.com/profile.php?id=100004622314386" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg>Click to see more of our work</a>
+    </div>
+  </div>
+  <div class="baseboard" aria-hidden="true"></div>
+  <div class="floor strip" aria-hidden="true"><canvas data-floor="strip"></canvas></div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Ryan Hardwood Floor LLC, back to top">
+      <svg class="brand-mark" viewBox="0 0 64 52" aria-hidden="true"><path d="M5 30 32 6l27 24" fill="none" stroke="#d6a94e" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><path d="M43 6h7v14l-7-6z" fill="#d6a94e"/><path d="M25 25h14v14H25z" fill="#d6a94e"/><path d="M32 25v14M25 32h14" stroke="#15212c" stroke-width="2.2"/></svg>
+      <span class="brand-name"><b>RYAN</b><small>HARDWOOD FLOOR LLC</small></span>
+    </a>
+    <p class="fine">Hardwood, vinyl and laminate floors. Serving New Jersey.</p>
+    <div class="foot-links">
+      <a href="tel:+19734932410">(973) 493-2410</a>
+      <a href="https://facebook.com/profile.php?id=100004622314386" rel="noopener">Facebook</a>
+    </div>
+    <p class="fine">© 2026 Ryan Hardwood Floor LLC</p>
+  </div>
+</footer>
+
+<script>
+/* ============ TEXT LINKS ============ */
+(function(){
+  var PHONE = '+19734932410';
+  window.smsHref = function(body){ return 'sms:' + PHONE + '?&body=' + encodeURIComponent(body); };
+  document.querySelectorAll('[data-sms]').forEach(function(a){ a.href = smsHref(a.getAttribute('data-sms')); });
+})();
+
+/* ============ QUOTE FORM -> TEXT MESSAGE ============ */
+(function(){
+  var form = document.getElementById('quote-form');
+  var sent = document.getElementById('sent');
+  var out = document.getElementById('sent-msg');
+  function val(id){ return document.getElementById(id).value.trim(); }
+  function setErr(id, field, msg){
+    document.getElementById(id).textContent = msg;
+    if (field) field.setAttribute('aria-invalid', msg ? 'true' : 'false');
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = val('q-name'), town = val('q-town');
+    var work = Array.prototype.map.call(form.querySelectorAll('input[name=work]:checked'), function(i){ return i.value; });
+    var whenEl = form.querySelector('input[name=when]:checked');
+    var first = null;
+    setErr('e-name', document.getElementById('q-name'), name ? '' : 'Add your name so we know who is texting.');
+    setErr('e-town', document.getElementById('q-town'), town ? '' : 'Add your town so we know where the job is.');
+    setErr('e-work', null, work.length ? '' : 'Pick at least one kind of work.');
+    if (!name) first = document.getElementById('q-name');
+    else if (!town) first = document.getElementById('q-town');
+    else if (!work.length) first = form.querySelector('input[name=work]');
+    if (first){ first.focus(); return; }
+    var lines = ["Hi! I'd like a free estimate.", 'Name: ' + name, 'Town: ' + town, 'Work: ' + work.join(', ')];
+    if (val('q-size')) lines.push('Size: ' + val('q-size'));
+    if (whenEl) lines.push('When: ' + whenEl.value);
+    if (val('q-notes')) lines.push('Notes: ' + val('q-notes'));
+    var msg = lines.join('\n');
+    out.textContent = msg;
+    sent.hidden = false;
+    window.location.href = smsHref(msg);
+    setTimeout(function(){ sent.focus({preventScroll:true}); sent.scrollIntoView({block:'nearest'}); }, 400);
+  });
+  ['q-name','q-town'].forEach(function(id){
+    document.getElementById(id).addEventListener('input', function(){ setErr('e-' + id.slice(2), this, ''); });
+  });
+  form.addEventListener('change', function(e){ if (e.target.name === 'work') setErr('e-work', null, ''); });
+  document.getElementById('copy-btn').addEventListener('click', function(){
+    var b = this;
+    function done(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy message'; }, 2000); }
+    if (navigator.clipboard) navigator.clipboard.writeText(out.textContent).then(done, function(){ b.textContent = 'Press and hold the message to copy it'; });
+    else b.textContent = 'Press and hold the message to copy it';
+  });
+})();
+
+/* ============ LIVING FLOORS: sand the worn finish back to oak ============ */
+(function(){
+  var T = {
+    DPR_MAX: 1.5,
+    PLANK: 52,          // plank width, css px (phone)
+    PLANK_DESK: 64,     // plank width, css px (>= 900px)
+    CELL: 4,            // sanding mask resolution, css px
+    BRUSH: 0.62,        // brush radius as a share of plank width
+    BITE: 0.34,         // how much worn finish one stamp removes
+    REGROW: 0.0007,     // worn finish creeping back, per frame (~25s to fully dull again)
+    CURE: 0.011,        // bare sanded wood warming to finished oak, per frame
+    SANDER_SPEED: 300,  // autoplay sander, css px per second
+    IDLE_RESUME: 3200,  // ms after the last touch before autoplay picks up again
+    DUST_MAX: 260
+  };
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var floors = [];
+
+  function rng(seed){ return function(){ seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function canvas(w, h){ var c = document.createElement('canvas'); c.width = w; c.height = h; return c; }
+
+  /* --- plank layout: shared by every layer so they line up exactly --- */
+  function layout(w, h, ph, r){
+    var planks = [];
+    for (var y = 0, row = 0; y < h; y += ph, row++){
+      var x = -r() * ph * 7;
+      while (x < w){
+        var len = ph * (5 + r() * 6);
+        var p = { x: x, y: y, w: len, h: ph, lv: r() * 2 - 1, hv: r() * 2 - 1, grains: [], cat: null, flecks: [] };
+        // one shared sweep per plank so its lines run together, like real growth rings
+        var sw = { a: 1 + r() * 4, f: 0.002 + r() * 0.006, p: r() * 6.3 };
+        var n = 26 + (r() * 18 | 0);
+        for (var g = 0; g < n; g++){
+          p.grains.push({ y0: r() * ph, a1: sw.a * (0.6 + r() * 0.8), f1: sw.f, p1: sw.p + r() * 0.5, a2: 0.15 + r() * 0.5, f2: 0.02 + r() * 0.04, p2: r() * 6.3, lw: 0.35 + r() * 0.8, al: 0.15 + r() * 0.6 });
+        }
+        p.bands = [];
+        for (var b = 0; b < 2 + (r() * 3 | 0); b++) p.bands.push({ y0: r() * ph, lw: 3 + r() * 7, al: 0.05 + r() * 0.08 });
+        if (r() < 0.5) p.cat = { cx: x + len * (0.2 + r() * 0.6), cy: y + ph * (0.3 + r() * 0.4), dir: r() < 0.5 ? 1 : -1, n: 5 + (r() * 4 | 0), sp: 0.8 + r() * 0.5 };
+        var nf = (len * ph) / 900 | 0;
+        for (var f = 0; f < nf; f++) p.flecks.push({ x: x + r() * len, y: y + r() * ph, l: 2 + r() * 6, a: r() });
+        planks.push(p);
+        x += len;
+      }
+    }
+    return planks;
+  }
+
+  var streakCanvas = null;
+  function streaks(ctx){
+    if (!streakCanvas){
+      var W = 512, H = 128, r = rng(99);
+      streakCanvas = canvas(W, H);
+      var c = streakCanvas.getContext('2d'), img = c.createImageData(W, H), d = img.data;
+      for (var y = 0; y < H; y++){
+        var v = r(), drift = r() * 0.6;
+        for (var x = 0; x < W; x++){
+          v += (r() - 0.5) * 0.06; v = v < 0 ? 0 : v > 1 ? 1 : v;
+          var i = (y * W + x) * 4;
+          d[i] = 60; d[i + 1] = 34; d[i + 2] = 16; d[i + 3] = Math.max(0, v - 0.45) * 120 * (0.4 + drift);
+        }
+      }
+      c.putImageData(img, 0, 0);
+    }
+    return ctx.createPattern(streakCanvas, 'repeat');
+  }
+
+  function paint(ctx, planks, s, tone){
+    planks.forEach(function(p){
+      ctx.save();
+      ctx.beginPath(); ctx.rect(p.x, p.y, p.w, p.h); ctx.clip();
+      ctx.fillStyle = 'hsl(' + (tone.h + p.hv * tone.hj) + ',' + tone.s + '%,' + (tone.l + p.lv * tone.lj) + '%)';
+      ctx.fillRect(p.x, p.y, p.w, p.h);
+      // soft lengthwise color drift inside the plank
+      var gr = ctx.createLinearGradient(p.x, 0, p.x + p.w, 0);
+      gr.addColorStop(0, 'rgba(' + tone.drift + ',.10)'); gr.addColorStop(.5, 'rgba(' + tone.drift + ',0)'); gr.addColorStop(1, 'rgba(' + tone.drift + ',.14)');
+      ctx.fillStyle = gr; ctx.fillRect(p.x, p.y, p.w, p.h);
+      // fine streaks: the close grain you see up close
+      ctx.globalAlpha = tone.ga * 0.9;
+      ctx.fillStyle = streaks(ctx);
+      ctx.fillRect(p.x, p.y, p.w, p.h);
+      ctx.globalAlpha = 1;
+      ctx.strokeStyle = tone.grain;
+      p.bands.forEach(function(g){
+        ctx.globalAlpha = g.al * tone.ga;
+        ctx.lineWidth = g.lw * s;
+        ctx.beginPath();
+        for (var x = p.x; x <= p.x + p.w + 12; x += 12){
+          var yy = p.y + g.y0 + p.grains[0].a1 * Math.sin(x / s * p.grains[0].f1 + p.grains[0].p1) * s;
+          if (x === p.x) ctx.moveTo(x, yy); else ctx.lineTo(x, yy);
+        }
+        ctx.stroke();
+      });
+      p.grains.forEach(function(g){
+        ctx.globalAlpha = g.al * tone.ga;
+        ctx.lineWidth = g.lw * s;
+        ctx.beginPath();
+        for (var x = p.x; x <= p.x + p.w + 10; x += 10){
+          var yy = p.y + g.y0 + g.a1 * Math.sin(x / s * g.f1 + g.p1) * s + g.a2 * Math.sin(x / s * g.f2 + g.p2) * s;
+          if (x === p.x) ctx.moveTo(x, yy); else ctx.lineTo(x, yy);
+        }
+        ctx.stroke();
+      });
+      if (p.cat){
+        ctx.lineWidth = 1.1 * s;
+        for (var k = 1; k <= p.cat.n; k++){
+          ctx.globalAlpha = tone.ga * (0.55 - k * 0.04);
+          ctx.beginPath();
+          var rx = p.h * (0.9 + k * 0.55 * p.cat.sp), ry = k * p.h * 0.075;
+          ctx.ellipse(p.cat.cx, p.cat.cy, rx, ry, 0, p.cat.dir > 0 ? -Math.PI / 2 : Math.PI / 2, p.cat.dir > 0 ? Math.PI / 2 : Math.PI * 1.5);
+          ctx.stroke();
+        }
+      }
+      ctx.lineWidth = 1 * s;
+      p.flecks.forEach(function(f){
+        ctx.globalAlpha = tone.ga * 0.35 * f.a;
+        ctx.beginPath(); ctx.moveTo(f.x, f.y); ctx.lineTo(f.x + f.l * s, f.y); ctx.stroke();
+      });
+      ctx.globalAlpha = 1;
+      ctx.restore();
+      // seams: long edge and butt joint
+      ctx.fillStyle = tone.seam;
+      ctx.fillRect(p.x, p.y, p.w, Math.max(1, 1.4 * s));
+      ctx.fillRect(p.x, p.y, Math.max(1, 1.4 * s), p.h);
+    });
+  }
+
+  function light(ctx, w, h, s){
+    var g = ctx.createLinearGradient(0, 0, 0, 30 * s);
+    g.addColorStop(0, 'rgba(24,14,6,.42)'); g.addColorStop(1, 'rgba(24,14,6,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, w, 30 * s);
+    var rg = ctx.createRadialGradient(w * 0.25, -h * 0.1, 0, w * 0.25, -h * 0.1, Math.max(w, h) * 0.95);
+    rg.addColorStop(0, 'rgba(255,238,205,.20)'); rg.addColorStop(1, 'rgba(255,238,205,0)');
+    ctx.fillStyle = rg; ctx.fillRect(0, 0, w, h);
+    var v = ctx.createLinearGradient(0, 0, w, 0);
+    v.addColorStop(0, 'rgba(30,16,6,0)'); v.addColorStop(.75, 'rgba(30,16,6,0)'); v.addColorStop(1, 'rgba(30,16,6,.16)');
+    ctx.fillStyle = v; ctx.fillRect(0, 0, w, h);
+  }
+
+  var FINISHED = { h: 30, hj: 4, s: 58, l: 49, lj: 7, ga: 0.8, grain: 'hsl(22,62%,20%)', seam: 'rgba(52,28,12,.72)', drift: '70,30,0' };
+  var BARE     = { h: 37, hj: 3, s: 44, l: 77, lj: 4, ga: 0.55, grain: 'hsl(30,38%,50%)', seam: 'rgba(120,88,58,.55)', drift: '255,250,240' };
+
+  function build(f){
+    var cw = Math.round(f.c.clientWidth), ch = Math.round(f.c.clientHeight);
+    if (!cw || !ch || (cw === f.cw && ch === f.ch)) return;
+    f.cw = cw; f.ch = ch;
+    var dpr = Math.min(window.devicePixelRatio || 1, T.DPR_MAX);
+    var w = Math.round(cw * dpr), h = Math.round(ch * dpr);
+    f.c.width = w; f.c.height = h; f.dpr = dpr;
+    var ph = (cw >= 900 ? T.PLANK_DESK : T.PLANK) * dpr;
+    f.ph = ph / dpr;
+    var planks = layout(w, h, ph, rng(f.seed));
+
+    f.fin = canvas(w, h); var c1 = f.fin.getContext('2d'); paint(c1, planks, dpr, FINISHED); light(c1, w, h, dpr);
+    f.bare = canvas(w, h); var c2 = f.bare.getContext('2d'); paint(c2, planks, dpr, BARE); light(c2, w, h, dpr);
+    f.worn = canvas(w, h); var c3 = f.worn.getContext('2d'); paint(c3, planks, dpr, FINISHED); wear(c3, w, h, dpr, rng(f.seed + 7));
+    light(c3, w, h, dpr);
+    f.tmp = canvas(w, h); f.tctx = f.tmp.getContext('2d');
+
+    f.gw = Math.ceil(cw / T.CELL); f.gh = Math.ceil(ch / T.CELL);
+    var n = f.gw * f.gh;
+    f.wornA = new Float32Array(n).fill(1);
+    f.bareA = new Float32Array(n);
+    f.grit = new Float32Array(n);
+    var r = rng(f.seed + 3);
+    for (var i = 0; i < n; i++) f.grit[i] = 0.7 + r() * 0.3;
+    f.mw = canvas(f.gw, f.gh); f.mb = canvas(f.gw, f.gh);
+    f.mwImg = f.mw.getContext('2d').createImageData(f.gw, f.gh);
+    f.mbImg = f.mb.getContext('2d').createImageData(f.gw, f.gh);
+    f.sander = { x: -40, lane: 2, dir: 1 };
+    f.prev = null;
+    stillPass(f);   // start with a stretch already sanded, so before and after both show
+    draw(f);
+  }
+
+  /* --- the tired old finish: grey, dull, scuffed, scratched --- */
+  function wear(ctx, w, h, s, r){
+    ctx.globalCompositeOperation = 'saturation';
+    ctx.fillStyle = 'rgba(128,128,128,.62)'; ctx.fillRect(0, 0, w, h);
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.fillStyle = 'rgba(150,140,126,.34)'; ctx.fillRect(0, 0, w, h);
+    var i, area = (w * h) / (s * s * 10000);
+    for (i = 0; i < 6 * area / 10 + 3; i++){
+      var bx = r() * w, by = r() * h, br = (30 + r() * 90) * s;
+      var bg = ctx.createRadialGradient(bx, by, 0, bx, by, br);
+      bg.addColorStop(0, 'rgba(66,52,40,.26)'); bg.addColorStop(1, 'rgba(66,52,40,0)');
+      ctx.fillStyle = bg; ctx.fillRect(bx - br, by - br, br * 2, br * 2);
+    }
+    ctx.lineCap = 'round';
+    for (i = 0; i < area * 9; i++){
+      var x = r() * w, y = r() * h, a = r() * 6.3, l = (4 + r() * 16) * s;
+      ctx.strokeStyle = 'rgba(58,48,40,' + (0.12 + r() * 0.2) + ')';
+      ctx.lineWidth = (1 + r() * 2.5) * s;
+      ctx.beginPath(); ctx.moveTo(x, y); ctx.quadraticCurveTo(x + Math.cos(a) * l * 0.6 + r() * 4 * s, y + Math.sin(a) * l * 0.6, x + Math.cos(a) * l, y + Math.sin(a) * l); ctx.stroke();
+    }
+    for (i = 0; i < area * 3; i++){
+      var sx = r() * w, sy = r() * h, sl = (30 + r() * 140) * s, sa = (r() - 0.5) * 0.7;
+      ctx.strokeStyle = 'rgba(232,226,214,' + (0.16 + r() * 0.22) + ')';
+      ctx.lineWidth = (0.6 + r() * 0.8) * s;
+      ctx.beginPath(); ctx.moveTo(sx, sy); ctx.quadraticCurveTo(sx + Math.cos(sa) * sl / 2, sy + Math.sin(sa) * sl / 2 + (r() - 0.5) * 10 * s, sx + Math.cos(sa) * sl, sy + Math.sin(sa) * sl); ctx.stroke();
+    }
+  }
+
+  /* --- sanding: one round stamp of the drum on the mask grid --- */
+  function stamp(f, x, y, rad, bite){
+    var C = T.CELL, gw = f.gw, gh = f.gh;
+    var x0 = Math.max(0, (x - rad) / C | 0), x1 = Math.min(gw - 1, (x + rad) / C | 0);
+    var y0 = Math.max(0, (y - rad) / C | 0), y1 = Math.min(gh - 1, (y + rad) / C | 0);
+    for (var gy = y0; gy <= y1; gy++){
+      for (var gx = x0; gx <= x1; gx++){
+        var dx = gx * C + C / 2 - x, dy = gy * C + C / 2 - y;
+        var d = Math.sqrt(dx * dx + dy * dy) / rad;
+        if (d >= 1) continue;
+        var k = gy * gw + gx, fall = (1 - d * d) * f.grit[k] * bite;
+        var before = f.wornA[k];
+        f.wornA[k] = Math.max(0, before - fall);
+        f.bareA[k] = Math.min(1, f.bareA[k] + fall * 1.6 + (before - f.wornA[k]));
+      }
+    }
+  }
+
+  function sandPath(f, ax, ay, bx, by, rad, vx, vy){
+    var dx = bx - ax, dy = by - ay, dist = Math.sqrt(dx * dx + dy * dy);
+    var steps = Math.max(1, Math.ceil(dist / (rad * 0.3)));
+    for (var i = 1; i <= steps; i++){
+      var t = i / steps;
+      stamp(f, ax + dx * t, ay + dy * t, rad, T.BITE);
+    }
+    var spawn = Math.min(10, 1 + dist / 6);
+    for (var j = 0; j < spawn && f.dust.length < T.DUST_MAX; j++){
+      var a = Math.random() * 6.283, sp = 20 + Math.random() * 90;
+      f.dust.push({ x: bx + Math.cos(a) * rad * 0.6, y: by + Math.sin(a) * rad * 0.6, vx: Math.cos(a) * sp - vx * 0.25, vy: Math.sin(a) * sp - vy * 0.25, life: 0, max: 0.5 + Math.random() * 0.9, r: 0.7 + Math.random() * 1.7 });
+    }
+  }
+
+  function stillPass(f){
+    var rad = f.ph * T.BRUSH;
+    for (var lane = 0; lane < 2; lane++){
+      var y = f.ph * (lane + 0.5);
+      for (var x = -rad; x < f.cw * 0.62; x += rad * 0.3) stamp(f, x, y, rad, 1);
+    }
+    f.bareA.fill(0);
+  }
+
+  function writeMask(arr, img){
+    var d = img.data;
+    for (var i = 0, j = 3; i < arr.length; i++, j += 4) d[j] = arr[i] * 255;
+  }
+
+  function layer(f, src, mask, img, arr, ctx){
+    writeMask(arr, img);
+    mask.getContext('2d').putImageData(img, 0, 0);
+    var t = f.tctx, w = f.c.width, h = f.c.height;
+    t.globalCompositeOperation = 'copy';
+    t.drawImage(src, 0, 0);
+    t.globalCompositeOperation = 'destination-in';
+    t.imageSmoothingEnabled = true;
+    t.drawImage(mask, 0, 0, f.gw * T.CELL * f.dpr, f.gh * T.CELL * f.dpr);
+    t.globalCompositeOperation = 'source-over';
+    ctx.drawImage(f.tmp, 0, 0);
+  }
+
+  function draw(f){
+    var ctx = f.ctx;
+    ctx.drawImage(f.fin, 0, 0);
+    layer(f, f.bare, f.mb, f.mbImg, f.bareA, ctx);
+    layer(f, f.worn, f.mw, f.mwImg, f.wornA, ctx);
+    var s = f.dpr;
+    for (var i = 0; i < f.dust.length; i++){
+      var p = f.dust[i], a = 1 - p.life / p.max;
+      ctx.fillStyle = 'rgba(242,226,196,' + (a * 0.85).toFixed(3) + ')';
+      ctx.beginPath(); ctx.arc(p.x * s, p.y * s, p.r * s, 0, 6.283); ctx.fill();
+    }
+  }
+
+  function step(f, dt, now){
+    if (!f.wornA) return;
+    var i, n = f.wornA.length;
+    for (i = 0; i < n; i++){
+      if (f.wornA[i] < 1) f.wornA[i] = Math.min(1, f.wornA[i] + T.REGROW);
+      if (f.bareA[i] > 0) f.bareA[i] = Math.max(0, f.bareA[i] - T.CURE);
+    }
+    var rad = f.ph * T.BRUSH;
+    // finger or mouse: read the rect every frame so a scrolling page keeps sanding under the finger
+    if (f.ptr){
+      var rect = f.c.getBoundingClientRect();
+      var x = (f.ptr.cx - rect.left) * f.cw / rect.width, y = (f.ptr.cy - rect.top) * f.ch / rect.height;
+      if (f.prev && x > -rad && x < f.cw + rad && y > -rad && y < f.ch + rad){
+        sandPath(f, f.prev.x, f.prev.y, x, y, rad, (x - f.prev.x) / dt, (y - f.prev.y) / dt);
+      }
+      f.prev = { x: x, y: y };
+    } else f.prev = null;
+    // the sander runs along the grain, one plank row per pass
+    if (now - f.lastTouch > T.IDLE_RESUME){
+      var sd = f.sander, lanes = Math.max(1, Math.floor(f.ch / f.ph));
+      var ly = f.ph * (sd.lane + 0.5) + Math.sin(now / 900) * f.ph * 0.08;
+      var ox = sd.x;
+      sd.x += sd.dir * T.SANDER_SPEED * dt;
+      sandPath(f, ox, ly, sd.x, ly, rad, sd.dir * T.SANDER_SPEED, 0);
+      if ((sd.dir > 0 && sd.x > f.cw + rad) || (sd.dir < 0 && sd.x < -rad)){
+        sd.dir *= -1; sd.lane = (sd.lane + 1) % lanes;
+      }
+    }
+    for (i = f.dust.length - 1; i >= 0; i--){
+      var p = f.dust[i];
+      p.life += dt;
+      if (p.life >= p.max){ f.dust.splice(i, 1); continue; }
+      var drag = Math.pow(0.04, dt);
+      p.vx *= drag; p.vy *= drag;
+      p.x += p.vx * dt; p.y += p.vy * dt;
+    }
+    draw(f);
+  }
+
+  document.querySelectorAll('canvas[data-floor]').forEach(function(c, idx){
+    var f = { c: c, ctx: c.getContext('2d'), seed: 1337 + idx * 101, visible: false, dust: [], ptr: null, lastTouch: -1e9, hero: c.getAttribute('data-floor') === 'hero' };
+    floors.push(f);
+    build(f);
+    function move(e){ f.ptr = { cx: e.clientX, cy: e.clientY }; f.lastTouch = performance.now(); }
+    function end(e){ if (e.pointerType !== 'mouse' || e.type === 'pointerleave') f.ptr = null; }
+    c.addEventListener('pointerdown', function(e){ move(e); f.prev = null; }, { passive: true });
+    c.addEventListener('pointermove', move, { passive: true });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(function(t){ c.addEventListener(t, end, { passive: true }); });
+  });
+
+  // build() skips unless the rounded size really changed: phones fire resize when the address bar slides
+  window.addEventListener('resize', function(){ floors.forEach(build); });
+
+  if (reduce) return;
+
+  var running = false, last = 0;
+  function tick(now){
+    var dt = Math.min(0.05, (now - last) / 1000 || 0.016); last = now;
+    var any = false;
+    if (!document.hidden) floors.forEach(function(f){ if (f.visible){ any = true; step(f, dt, now); } });
+    if (any) requestAnimationFrame(tick); else running = false;
+  }
+  function kick(){ if (!running){ running = true; last = performance.now(); requestAnimationFrame(tick); } }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ floors.forEach(function(f){ if (f.c === en.target){ f.visible = en.isIntersecting; } }); });
+    kick();
+  });
+  floors.forEach(function(f){ io.observe(f.c); });
+  document.addEventListener('visibilitychange', kick);
+})();
+</script>
+</body>
+</html>
