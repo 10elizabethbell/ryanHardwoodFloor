@@ -16,6 +16,9 @@ colors:
   focus: "#2d6cdf"
   err: "#b3261e"
   oak-plain: "#a8763f"
+  baseboard-shade: "#e9e2d6"
+  baseboard-foot: "#e4dccf"
+  placeholder: "#68737e"
 typography:
   display:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
@@ -54,6 +57,52 @@ typography:
     fontSize: "17px"
     fontWeight: 800
     lineHeight: 1.55
+  close-display:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(34px, 9.6vw, 80px)"
+    fontWeight: 900
+    lineHeight: 1
+    letterSpacing: "-0.01em"
+  step-number:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "48px"
+    fontWeight: 900
+    lineHeight: 0.9
+  wordmark:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "24px"
+    fontWeight: 900
+    letterSpacing: "0.05em"
+  wordmark-desk:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "30px"
+    fontWeight: 900
+    letterSpacing: "0.05em"
+  wordmark-tag:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "10px"
+    fontWeight: 800
+    letterSpacing: "0.14em"
+  wordmark-tag-small:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "9.5px"
+    fontWeight: 800
+    letterSpacing: "0.09em"
+  wordmark-tag-desk:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "11.5px"
+    fontWeight: 800
+    letterSpacing: "0.14em"
+  small:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.55
+  fine:
+    fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+    fontSize: "15px"
+    fontWeight: 400
+    lineHeight: 1.5
 rounded:
   field: "10px"
   card: "12px"
