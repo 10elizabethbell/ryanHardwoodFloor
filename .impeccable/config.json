@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "roboto",
+        "createdAt": "2026-10-19T01:45:18.691Z",
+        "reason": "pitch-site house rule (ellie-taste.md 'Type: the system font stack'): Roboto is only the Android fallback in the system stack"
+      }
+    ]
+  }
+}

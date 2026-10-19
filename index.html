@@ -45,7 +45,7 @@ body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.55 var(--font
 ::selection{background:var(--gold);color:var(--ink)}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 var(--gutter)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--gutter)}
 h1,h2,h3{margin:0;font-weight:900;text-wrap:balance}
 h2{font-size:clamp(30px,8vw,54px);line-height:1;text-transform:uppercase;letter-spacing:-.01em}
 svg{display:block}
@@ -98,7 +98,8 @@ svg{display:block}
 .arrow svg{width:18px;height:18px}
 .row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
 .row:hover .arrow,.row:focus-visible .arrow{background:var(--gold)}
-.row:focus-visible .arrow{outline:3px solid var(--gold);outline-offset:3px}
+.row:focus-visible .arrow{outline:3px solid var(--ink);outline-offset:3px}
+.services :focus-visible,.sent :focus-visible{outline-color:var(--ink)}
 .svc-note{margin:16px 0 0;color:var(--ink-soft);font-size:16px}
 
 /* ============ HOW IT WORKS ============ */
@@ -138,7 +139,7 @@ input[type=text]:focus,input[type=tel]:focus,textarea:focus{outline:none;border-
 .sent[hidden]{display:none}
 .sent h3{font-size:21px;margin-bottom:6px}
 .sent p{margin:0 0 12px}
-.sent pre{margin:0 0 16px;padding:14px;border-radius:10px;background:var(--cream);white-space:pre-wrap;font:15px/1.5 var(--font)}
+.sent pre{overflow-wrap:anywhere;margin:0 0 16px;padding:14px;border-radius:10px;background:var(--cream);white-space:pre-wrap;font:15px/1.5 var(--font)}
 .sent .btn{border-color:var(--ink);color:var(--ink);background:transparent;min-height:52px}
 .sent a{font-weight:800}
 
@@ -161,7 +162,7 @@ footer .brand{color:var(--on-wall)}
   .brand{gap:8px}
   .brand-mark{width:34px;height:28px}
   .brand-name b{font-size:21px}
-  .brand-name small{font-size:8.5px;letter-spacing:.12em}
+  .brand-name small{font-size:9.5px;letter-spacing:.09em}
   .top-phone{font-size:15px}
   .top-phone svg{display:none}
 }
@@ -182,7 +183,6 @@ footer .brand{color:var(--on-wall)}
   .svc li{break-inside:avoid}
   .steps{grid-template-columns:repeat(3,1fr);gap:40px}
   .services,.steps-wrap,.quote{padding-top:96px}
-  .quote .wrap{max-width:720px}
   .close-copy{padding-top:110px}
 }
 </style>
@@ -232,7 +232,7 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
       <li><a class="row" href="sms:+19734932410" data-sms="Hi! I'd like a free estimate for a floor repair. Town: ">Floor repairs<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
       <li><a class="row" href="sms:+19734932410" data-sms="Hi! I'd like a free estimate for stair refinishing. Town: ">Stair refinishing<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
     </ul>
-    <p class="svc-note">Tap one to text us about it.</p>
+    <p class="svc-note">Pick one to text us about it.</p>
   </div>
 </section>
 
@@ -241,8 +241,8 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
   <div class="wrap steps-wrap">
     <h2 id="how-h">How it works</h2>
     <ol class="steps">
-      <li><span class="n" aria-hidden="true">1</span><h3>Text us a few photos</h3><p>Show us the floor and tell us your town.</p></li>
-      <li><span class="n" aria-hidden="true">2</span><h3>Free estimate</h3><p>We look at the job and give you a straight price before any work starts.</p></li>
+      <li><span class="n" aria-hidden="true">1</span><h3>Call or text us</h3><p>Tell us about the floor and your town.</p></li>
+      <li><span class="n" aria-hidden="true">2</span><h3>Free estimate</h3><p>We look at the job and give you a free estimate.</p></li>
       <li><span class="n" aria-hidden="true">3</span><h3>Floors you're proud of</h3><p>Installed, sanded or repaired, and finished to last.</p></li>
     </ol>
   </div>
@@ -258,24 +258,24 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
       <div class="field">
         <label for="q-name">Your name</label>
         <input type="text" id="q-name" name="name" autocomplete="name" aria-describedby="e-name">
-        <p class="err" id="e-name" role="alert"></p>
+        <p class="err" id="e-name" aria-live="polite"></p>
       </div>
       <div class="field">
         <label for="q-town">Town</label>
         <input type="text" id="q-town" name="town" autocomplete="address-level2" placeholder="Where the job is" aria-describedby="e-town">
-        <p class="err" id="e-town" role="alert"></p>
+        <p class="err" id="e-town" aria-live="polite"></p>
       </div>
       <fieldset class="field" aria-describedby="e-work">
         <legend>What do you need?</legend>
         <div class="chips" id="q-work">
-          <label class="chip"><input type="checkbox" name="work" value="Hardwood installation"><span>Hardwood installation</span></label>
-          <label class="chip"><input type="checkbox" name="work" value="Sanding & refinishing"><span>Sanding &amp; refinishing</span></label>
-          <label class="chip"><input type="checkbox" name="work" value="Staining"><span>Staining</span></label>
-          <label class="chip"><input type="checkbox" name="work" value="Vinyl (LVP) & laminate"><span>Vinyl (LVP) &amp; laminate</span></label>
-          <label class="chip"><input type="checkbox" name="work" value="Floor repairs"><span>Floor repairs</span></label>
-          <label class="chip"><input type="checkbox" name="work" value="Stair refinishing"><span>Stair refinishing</span></label>
+          <label class="chip"><input type="checkbox" aria-describedby="e-work" name="work" value="Hardwood installation"><span>Hardwood installation</span></label>
+          <label class="chip"><input type="checkbox" aria-describedby="e-work" name="work" value="Sanding & refinishing"><span>Sanding &amp; refinishing</span></label>
+          <label class="chip"><input type="checkbox" aria-describedby="e-work" name="work" value="Staining"><span>Staining</span></label>
+          <label class="chip"><input type="checkbox" aria-describedby="e-work" name="work" value="Vinyl (LVP) & laminate"><span>Vinyl (LVP) &amp; laminate</span></label>
+          <label class="chip"><input type="checkbox" aria-describedby="e-work" name="work" value="Floor repairs"><span>Floor repairs</span></label>
+          <label class="chip"><input type="checkbox" aria-describedby="e-work" name="work" value="Stair refinishing"><span>Stair refinishing</span></label>
         </div>
-        <p class="err" id="e-work" role="alert"></p>
+        <p class="err" id="e-work" aria-live="polite"></p>
       </fieldset>
       <div class="field">
         <label for="q-size">How big is the job? <span class="opt">(optional)</span></label>
@@ -308,10 +308,9 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
 <!-- ============ CLOSE ============ -->
 <section class="wall" aria-labelledby="close-h">
   <div class="close-copy">
-    <h2 id="close-h">Let's see your floor.</h2>
-    <p>Send a few photos and your town. The estimate is free.</p>
+    <h2 id="close-h">Love your floors again.</h2>
+    <p>Serving New Jersey. Every estimate is free.</p>
     <div class="btns">
-      <a class="btn btn-fill" href="sms:+19734932410" data-sms="Hi! I'd like a free estimate. Here are some photos of my floor. Town: "><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2z" transform="translate(-1 -1)"/></svg>Text us your photos</a>
       <a class="btn btn-line" href="https://facebook.com/profile.php?id=100004622314386" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg>Click to see more of our work</a>
     </div>
   </div>
@@ -374,8 +373,8 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
     var msg = lines.join('\n');
     out.textContent = msg;
     sent.hidden = false;
+    sent.focus({preventScroll:true}); sent.scrollIntoView({block:'nearest'});
     window.location.href = smsHref(msg);
-    setTimeout(function(){ sent.focus({preventScroll:true}); sent.scrollIntoView({block:'nearest'}); }, 400);
   });
   ['q-name','q-town'].forEach(function(id){
     document.getElementById(id).addEventListener('input', function(){ setErr('e-' + id.slice(2), this, ''); });
@@ -383,7 +382,7 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
   form.addEventListener('change', function(e){ if (e.target.name === 'work') setErr('e-work', null, ''); });
   document.getElementById('copy-btn').addEventListener('click', function(){
     var b = this;
-    function done(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy message'; }, 2000); }
+    function done(){ b.textContent = 'Copied. Paste it in a text to us.'; setTimeout(function(){ b.textContent = 'Copy message'; }, 2000); }
     if (navigator.clipboard) navigator.clipboard.writeText(out.textContent).then(done, function(){ b.textContent = 'Press and hold the message to copy it'; });
     else b.textContent = 'Press and hold the message to copy it';
   });
@@ -398,8 +397,8 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
     CELL: 4,            // sanding mask resolution, css px
     BRUSH: 0.62,        // brush radius as a share of plank width
     BITE: 0.34,         // how much worn finish one stamp removes
-    REGROW: 0.0007,     // worn finish creeping back, per frame (~25s to fully dull again)
-    CURE: 0.011,        // bare sanded wood warming to finished oak, per frame
+    REGROW: 0.0007,     // worn finish creeping back, per 60fps frame (~25s to fully dull again)
+    CURE: 0.005,        // bare sanded wood warming to finished oak, per 60fps frame (~3s)
     SANDER_SPEED: 300,  // autoplay sander, css px per second
     IDLE_RESUME: 3200,  // ms after the last touch before autoplay picks up again
     DUST_MAX: 260
@@ -529,7 +528,7 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
   }
 
   var FINISHED = { h: 30, hj: 4, s: 58, l: 49, lj: 7, ga: 0.8, grain: 'hsl(22,62%,20%)', seam: 'rgba(52,28,12,.72)', drift: '70,30,0' };
-  var BARE     = { h: 37, hj: 3, s: 44, l: 77, lj: 4, ga: 0.55, grain: 'hsl(30,38%,50%)', seam: 'rgba(120,88,58,.55)', drift: '255,250,240' };
+  var BARE     = { h: 36, hj: 3, s: 42, l: 70, lj: 4, ga: 0.6, grain: 'hsl(30,38%,46%)', seam: 'rgba(120,88,58,.55)', drift: '225,200,160' };
 
   function build(f){
     var cw = Math.round(f.c.clientWidth), ch = Math.round(f.c.clientHeight);
@@ -558,9 +557,10 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
     f.mw = canvas(f.gw, f.gh); f.mb = canvas(f.gw, f.gh);
     f.mwImg = f.mw.getContext('2d').createImageData(f.gw, f.gh);
     f.mbImg = f.mb.getContext('2d').createImageData(f.gw, f.gh);
-    f.sander = { x: -40, lane: 2, dir: 1 };
+    f.sander = { x: -40, lane: 0, dir: 1 };
     f.prev = null;
     stillPass(f);   // start with a stretch already sanded, so before and after both show
+    f.sander.lane = sandedLanes(f) % Math.max(1, Math.floor(ch / ph * dpr));
     draw(f);
   }
 
@@ -572,9 +572,9 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
     ctx.fillStyle = 'rgba(150,140,126,.34)'; ctx.fillRect(0, 0, w, h);
     var i, area = (w * h) / (s * s * 10000);
     for (i = 0; i < 6 * area / 10 + 3; i++){
-      var bx = r() * w, by = r() * h, br = (30 + r() * 90) * s;
+      var bx = r() * w, by = r() * h, br = (20 + r() * 50) * s;
       var bg = ctx.createRadialGradient(bx, by, 0, bx, by, br);
-      bg.addColorStop(0, 'rgba(66,52,40,.26)'); bg.addColorStop(1, 'rgba(66,52,40,0)');
+      bg.addColorStop(0, 'rgba(66,52,40,.13)'); bg.addColorStop(1, 'rgba(66,52,40,0)');
       ctx.fillStyle = bg; ctx.fillRect(bx - br, by - br, br * 2, br * 2);
     }
     ctx.lineCap = 'round';
@@ -619,16 +619,17 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
     }
     var spawn = Math.min(10, 1 + dist / 6);
     for (var j = 0; j < spawn && f.dust.length < T.DUST_MAX; j++){
-      var a = Math.random() * 6.283, sp = 20 + Math.random() * 90;
+      var a = Math.random() * 6.283, sp = 10 + Math.random() * 40;
       f.dust.push({ x: bx + Math.cos(a) * rad * 0.6, y: by + Math.sin(a) * rad * 0.6, vx: Math.cos(a) * sp - vx * 0.25, vy: Math.sin(a) * sp - vy * 0.25, life: 0, max: 0.5 + Math.random() * 0.9, r: 0.7 + Math.random() * 1.7 });
     }
   }
 
+  function sandedLanes(f){ return Math.max(2, Math.ceil(Math.floor(f.ch / f.ph) * 0.5)); }
   function stillPass(f){
     var rad = f.ph * T.BRUSH;
-    for (var lane = 0; lane < 2; lane++){
-      var y = f.ph * (lane + 0.5);
-      for (var x = -rad; x < f.cw * 0.62; x += rad * 0.3) stamp(f, x, y, rad, 1);
+    for (var lane = 0; lane < sandedLanes(f); lane++){
+      var y = f.ph * (lane + 0.5), end = f.cw * (0.45 + ((lane * 37) % 10) / 30);
+      for (var x = -rad; x < end; x += rad * 0.3) stamp(f, x, y, rad, 1);
     }
     f.bareA.fill(0);
   }
@@ -659,17 +660,17 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
     var s = f.dpr;
     for (var i = 0; i < f.dust.length; i++){
       var p = f.dust[i], a = 1 - p.life / p.max;
-      ctx.fillStyle = 'rgba(242,226,196,' + (a * 0.85).toFixed(3) + ')';
+      ctx.fillStyle = 'rgba(206,174,128,' + (a * 0.8).toFixed(3) + ')';
       ctx.beginPath(); ctx.arc(p.x * s, p.y * s, p.r * s, 0, 6.283); ctx.fill();
     }
   }
 
   function step(f, dt, now){
     if (!f.wornA) return;
-    var i, n = f.wornA.length;
+    var i, n = f.wornA.length, k = dt * 60, rg = T.REGROW * k, cu = T.CURE * k;
     for (i = 0; i < n; i++){
-      if (f.wornA[i] < 1) f.wornA[i] = Math.min(1, f.wornA[i] + T.REGROW);
-      if (f.bareA[i] > 0) f.bareA[i] = Math.max(0, f.bareA[i] - T.CURE);
+      if (f.wornA[i] < 1) f.wornA[i] = Math.min(1, f.wornA[i] + rg);
+      if (f.bareA[i] > 0) f.bareA[i] = Math.max(0, f.bareA[i] - cu);
     }
     var rad = f.ph * T.BRUSH;
     // finger or mouse: read the rect every frame so a scrolling page keeps sanding under the finger
@@ -685,9 +686,9 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
     if (now - f.lastTouch > T.IDLE_RESUME){
       var sd = f.sander, lanes = Math.max(1, Math.floor(f.ch / f.ph));
       var ly = f.ph * (sd.lane + 0.5) + Math.sin(now / 900) * f.ph * 0.08;
-      var ox = sd.x;
-      sd.x += sd.dir * T.SANDER_SPEED * dt;
-      sandPath(f, ox, ly, sd.x, ly, rad, sd.dir * T.SANDER_SPEED, 0);
+      var ox = sd.x, sp = T.SANDER_SPEED * Math.max(1, f.cw / 700);
+      sd.x += sd.dir * sp * dt;
+      sandPath(f, ox, ly, sd.x, ly, rad, sd.dir * sp, 0);
       if ((sd.dir > 0 && sd.x > f.cw + rad) || (sd.dir < 0 && sd.x < -rad)){
         sd.dir *= -1; sd.lane = (sd.lane + 1) % lanes;
       }
@@ -697,7 +698,7 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
       p.life += dt;
       if (p.life >= p.max){ f.dust.splice(i, 1); continue; }
       var drag = Math.pow(0.04, dt);
-      p.vx *= drag; p.vy *= drag;
+      p.vx *= drag; p.vy *= drag; p.vy += 60 * dt;   // dust settles toward the viewer's side
       p.x += p.vx * dt; p.y += p.vy * dt;
     }
     draw(f);
@@ -706,7 +707,7 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
   document.querySelectorAll('canvas[data-floor]').forEach(function(c, idx){
     var f = { c: c, ctx: c.getContext('2d'), seed: 1337 + idx * 101, visible: false, dust: [], ptr: null, lastTouch: -1e9, hero: c.getAttribute('data-floor') === 'hero' };
     floors.push(f);
-    build(f);
+    if (f.hero) build(f);   // strips build when they first scroll into view
     function move(e){ f.ptr = { cx: e.clientX, cy: e.clientY }; f.lastTouch = performance.now(); }
     function end(e){ if (e.pointerType !== 'mouse' || e.type === 'pointerleave') f.ptr = null; }
     c.addEventListener('pointerdown', function(e){ move(e); f.prev = null; }, { passive: true });
@@ -715,9 +716,8 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
   });
 
   // build() skips unless the rounded size really changed: phones fire resize when the address bar slides
-  window.addEventListener('resize', function(){ floors.forEach(build); });
-
-  if (reduce) return;
+  var rz = 0;
+  window.addEventListener('resize', function(){ cancelAnimationFrame(rz); rz = requestAnimationFrame(function(){ floors.forEach(function(f){ if (f.fin) build(f); }); }); });
 
   var running = false, last = 0;
   function tick(now){
@@ -726,11 +726,11 @@ FORM: system type, heavy uppercase display, sentence-case body; living floors at
     if (!document.hidden) floors.forEach(function(f){ if (f.visible){ any = true; step(f, dt, now); } });
     if (any) requestAnimationFrame(tick); else running = false;
   }
-  function kick(){ if (!running){ running = true; last = performance.now(); requestAnimationFrame(tick); } }
+  function kick(){ if (!reduce && !running){ running = true; last = performance.now(); requestAnimationFrame(tick); } }
   var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){ floors.forEach(function(f){ if (f.c === en.target){ f.visible = en.isIntersecting; } }); });
+    entries.forEach(function(en){ floors.forEach(function(f){ if (f.c === en.target){ f.visible = en.isIntersecting; if (f.visible && !f.fin) build(f); } }); });
     kick();
-  });
+  }, { rootMargin: '200px 0px' });
   floors.forEach(function(f){ io.observe(f.c); });
   document.addEventListener('visibilitychange', kick);
 })();
